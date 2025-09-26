@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+import { IonContent } from '@ionic/angular/standalone';
 import { DiscoverContainerComponent } from '../discover-container/discover-container.component';
 
 
@@ -7,7 +7,7 @@ import { DiscoverContainerComponent } from '../discover-container/discover-conta
   selector: 'app-discover',
   templateUrl: 'discover.page.html',
   styleUrls: ['discover.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, DiscoverContainerComponent]
+  imports: [IonContent, DiscoverContainerComponent]
 })
 export class DiscoverPage {
 
