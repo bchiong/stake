@@ -1,16 +1,37 @@
+<ion-searchbar 
+  placeholder="Search" 
+  class="searchbar" 
+  [showClearButton]="true"
+>
+</ion-searchbar>
+
 <ion-content class="ion-padding" id="container">
-  <!-- Search bar-->
-    
+    <!--Recent searches-->
+  <div class="recent-searches">
+    <p class="subheading">Recently Searched</p>
+    <div class="recent-searches-item">
+      <div>
+        <p class="body1">AAPL</p>
+        <p class="body3"><ion-text color="medium">Volutpat trandg massasld mattis fringilla</ion-text></p>
+      </div>
+      <p class="body3">$105.44</p>
+    </div>
+  </div>
      <!-- Top 3 volume stocks -->
      <div class="top-3-volume-stocks">
       <p class="subheading">Top 3 volume stocks</p>
-      <div>
+      <div class="stock-card-group">
         <app-stock-card 
-          shortcode="FIG" 
-          name="Figma Inc." 
-          type="Stock" 
-          stockPrice="$105.44" 
-          logoUrl="/assets/logos/figma.jpg">
+          *ngFor="let stock of trendingStocks"
+          [shortcode]="stock.shortcode" 
+          [name]="stock.name" 
+          [type]="stock.type" 
+          [stockPrice]="stock.stockPrice" 
+          [logoUrl]="stock.logoUrl"
+          [categoryReverse]="true"
+          data1="$36.9M"
+          data2="$1.2B"
+          data3="$30.32">
         </app-stock-card>
       </div>
      </div>

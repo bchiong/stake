@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { IonText } from '@ionic/angular/standalone';
 
 @Component({
@@ -6,7 +7,7 @@ import { IonText } from '@ionic/angular/standalone';
   templateUrl: './stock-card.component.html',
   styleUrls: ['./stock-card.component.scss'],
   standalone: true,
-  imports: [IonText]
+  imports: [CommonModule, IonText]
 })
 export class StockCardComponent {
   @Input() shortcode: string = '';
@@ -15,4 +16,8 @@ export class StockCardComponent {
   @Input() stockPrice: string = '';
   @Input() logoUrl: string = '';
   @Input() variant: 'default' | 'lite' = 'default';
+  @Input() categoryReverse: boolean = false;
+  @Input() data1: string | null = null;
+  @Input() data2: string | null = null;
+  @Input() data3: string | null = null;
 }

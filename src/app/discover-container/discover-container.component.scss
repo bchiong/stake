@@ -12,3 +12,36 @@
 #container p {
   margin: 0;
 }
+
+.recent-searches {
+  margin-bottom: 24px;
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+}
+
+.searchbar-search-icon {
+  color: #666;
+  font-size: 20px;
+}
+
+.searchbar-clear-button {
+  color: #666;
+  font-size: 18px;
+}
+
+.top-3-volume-stocks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.stock-card-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

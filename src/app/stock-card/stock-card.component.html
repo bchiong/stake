@@ -3,12 +3,25 @@
     <img [src]="logoUrl" [alt]="name + ' logo'" class="logo" width="32" height="32">
     <p class="type">{{ type }}</p>
   </div>
-  <div class="stock-card-category">
-    <p class="body3"><ion-text color="medium">{{ shortcode }}</ion-text></p>
-    <p class="body3"><ion-text color="medium">{{ name }}</ion-text></p>
+  <div class="stock-card-category" [class.stock-card-category--reverse]="categoryReverse">
+    <div>
+      <p class="body3"><ion-text color="medium">{{ shortcode }}</ion-text></p>
+      <p class="body3"><ion-text color="medium">{{ name }}</ion-text></p>
+    </div>
+    <p class="stock-card-price">{{ stockPrice }}</p>
   </div>
-  <p class="stock-card-price">{{ stockPrice }}</p>
-  <div class="stock-card-footer">
-    <p class="body3"><ion-text color="medium">123</ion-text></p>
+  <div class="stock-card-footer" *ngIf="data1 || data2 || data3">
+    <div class="stock-card-footer-item" *ngIf="data1">
+      <img src="/assets/icon/globe.svg" alt="globe" width="18" height="18">
+      <p class="body1"><ion-text color="medium">{{ data1 }}</ion-text></p>
+    </div>
+    <div class="stock-card-footer-item" *ngIf="data2">
+      <img src="/assets/icon/crosshair.svg" alt="crosshair" width="18" height="18">
+      <p class="body1"><ion-text color="medium">{{ data2 }}</ion-text></p>
+    </div>
+    <div class="stock-card-footer-item" *ngIf="data3">
+      <img src="/assets/icon/dollar.svg" alt="dollar" width="18" height="18">
+      <p class="body1"><ion-text color="medium">{{ data3 }}</ion-text></p>
+    </div>
   </div>
 </div>

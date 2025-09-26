@@ -2,7 +2,7 @@
   <!-- <h1 class="title">Dashboard</h1> -->
    <div class="total-equity ion-padding-bottom">
     <p class="subtitle">Total equity</p>
-    <p class="heading1 ion-padding-bottom">$8036</p>
+    <p class="heading1 ion-padding-bottom">{{ totalEquity }}</p>
   </div>
     <!-- Holdings -->
     <div id="holdings">
@@ -19,22 +19,22 @@
             <p class="column-header">Change</p>
           </ion-col>
         </ion-row>
-        <ion-row>
+        <ion-row *ngFor="let stock of stocks">
           <ion-col size="4" size-sm="4" size-md="4" size-lg="4" size-xl="4">
             <div class="column-body">
-              <p class="body2">AAPL</p>
-              <p class="body3"><ion-text color="medium">3.0282</ion-text></p>
+              <p class="body2">{{ stock.name }}</p>
+              <p class="body3"><ion-text color="medium">{{ stock.units }}</ion-text></p>
             </div>
           </ion-col>
           <ion-col size="4" size-sm="4" size-md="4" size-lg="4" size-xl="4">
             <div class="column-body">
-            <p>$105.44</p>
+            <p>${{ stock.price }}</p>
             </div>
           </ion-col>
           <ion-col size="4" size-sm="4" size-md="4" size-lg="4" size-xl="4">
             <div class="column-body">
               <div class="pill">
-                <p class="label-5">+22.90%</p>
+                <p class="label-5">+{{ stock.change }}%</p>
               </div>
             </div>
           </ion-col>
@@ -46,42 +46,15 @@
       <p class="subheading">Trending Stocks</p>
       <div class="stock-card-overflow-x">
         <app-stock-card 
+          *ngFor="let stock of trendingStocks"
           variant="lite"
-          shortcode="FIG" 
-          name="Figma Inc." 
-          type="Stock" 
-          stockPrice="$105.44" 
-          logoUrl="/assets/logos/figma.jpg">
-        </app-stock-card>
-        <app-stock-card 
-          variant="lite"
-          shortcode="AAPL" 
-          name="Apple Inc." 
-          type="Stock" 
-          stockPrice="$175.23" 
-          logoUrl="/assets/logos/figma.jpg">
-        </app-stock-card>
-        <app-stock-card 
-          variant="lite"
-          shortcode="GOOGL" 
-          name="Alphabet Inc." 
-          type="Stock" 
-          stockPrice="$2,845.67" 
-          logoUrl="/assets/logos/figma.jpg">
+          [shortcode]="stock.shortcode" 
+          [name]="stock.name" 
+          [type]="stock.type" 
+          [stockPrice]="stock.stockPrice" 
+          [logoUrl]="stock.logoUrl">
         </app-stock-card>
       </div>
      </div>
-     <!-- Top 3 volume stocks -->
-     <div class="top-3-volume-stocks">
-      <p class="subheading">Top 3 volume stocks</p>
-      <div>
-        <app-stock-card 
-          shortcode="FIG" 
-          name="Figma Inc." 
-          type="Stock" 
-          stockPrice="$105.44" 
-          logoUrl="/assets/logos/figma.jpg">
-        </app-stock-card>
-      </div>
-     </div>
+
 </ion-content>
