@@ -7,7 +7,6 @@ A mobile-first investment tracking application built with Ionic Angular, featuri
 - **Mobile-First Approach**: The application is designed exclusively for mobile devices and not optimized for desktop viewing
 - **Ionic Framework**: Leverages Ionic components for consistent mobile UI/UX patterns
 - **Figma-Based Styling**: Global styles and typography are derived from Figma designs rather than a comprehensive design system
-- **Responsive Grid System**: Uses Ionic's grid system for consistent layout across different screen sizes
 
 ## 🏗️ Component Architecture
 
