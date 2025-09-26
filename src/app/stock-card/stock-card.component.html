@@ -1,0 +1,14 @@
+<div class="stock-card" [class.stock-card--lite]="variant === 'lite'">
+  <div class="stock-card-header">
+    <img [src]="logoUrl" [alt]="name + ' logo'" class="logo" width="32" height="32">
+    <p class="type">{{ type }}</p>
+  </div>
+  <div class="stock-card-category">
+    <p class="body3"><ion-text color="medium">{{ shortcode }}</ion-text></p>
+    <p class="body3"><ion-text color="medium">{{ name }}</ion-text></p>
+  </div>
+  <p class="stock-card-price">{{ stockPrice }}</p>
+  <div class="stock-card-footer">
+    <p class="body3"><ion-text color="medium">123</ion-text></p>
+  </div>
+</div>

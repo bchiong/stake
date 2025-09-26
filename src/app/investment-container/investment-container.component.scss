@@ -1,0 +1,74 @@
+#container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+#container p {
+  margin: 0;
+}
+
+
+#holdings {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 48px;
+  ion-grid {
+    width: 100%;
+    min-width: 280px; /* Minimum width to ensure readability */
+    padding: 0px;
+  }
+  ion-row {
+    width: 100%;
+  }
+  ion-col {
+    padding: 0;
+  }
+}
+
+.column-header {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 130%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+
+.column-body {
+  margin-top: 10px;
+  margin-bottom: 10px;
+} 
+
+.pill {
+  background-color: #22B692;
+  width: max-content;
+  color: #FFFFFF;
+  padding: 4.5px 9px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stock-card-overflow-x {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 48px;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
