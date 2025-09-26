@@ -9,12 +9,12 @@ export const routes: Routes = [
       {
         path: 'investment',
         loadComponent: () =>
-          import('../investment-tab/investment.page').then((m) => m.InvestmentPage),
+          import('./invest/investment-tab/investment.page').then((m) => m.InvestmentPage),
       },
       {
         path: 'discover',
         loadComponent: () =>
-          import('../discover-tab/discover.page').then((m) => m.DiscoverPage),
+          import('./discover/discover-tab/discover.page').then((m) => m.DiscoverPage),
       },      {
         path: '',
         redirectTo: '/tabs/investment',

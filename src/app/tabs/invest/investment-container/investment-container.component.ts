@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonContent, IonText, IonGrid, IonRow, IonCol} from '@ionic/angular/standalone';
-import { StockCardComponent } from '../stock-card/stock-card.component';
-import { holdings } from '../holdings';
-import { trending } from '../trending';
+import { StockCardComponent } from '../../../components/stock-card/stock-card.component';
+import { holdings } from '../../../mock/holdings';
+import { trending } from '../../../mock/trending';
 
 @Component({
   selector: 'app-investment-container',

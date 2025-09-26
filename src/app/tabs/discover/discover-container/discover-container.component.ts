@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonContent, IonText, IonSearchbar} from '@ionic/angular/standalone';
-import { StockCardComponent } from '../stock-card/stock-card.component';
-import { trending } from '../trending';
+import { StockCardComponent } from '../../../components/stock-card/stock-card.component';
+import { trending } from '../../../mock/trending';
 
 @Component({
   selector: 'app-discover-container',
